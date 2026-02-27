@@ -78,6 +78,8 @@ See [the rustc-dev-guide for more info][sysllvm].
    If you're unsure which build configurations to use and need a good default, you
    can run the interactive `x.py setup` command. This will guide you through selecting
    a config profile, setting up the LSP, configuring a Git hook, etc.
+   ==> 
+   (即 先执行 wei@Berries:~/OPEN_SOURCE/Rust-Lang$ python3.10 x.py setup)
 
    With `configure` script, you can handle multiple configurations in a single
    command which is useful to create complex/advanced config files. For example:
