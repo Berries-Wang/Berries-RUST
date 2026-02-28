@@ -1,22 +1,14 @@
 # Rust 所有权(ownership)
 `所有权(ownership)`让 Rust 无需垃圾回收（garbage collector）即可保障内存安全
 
-## 内存与分配
-内存分配器（memory allocator）在堆的某处找到一块足够大的空位，把它标记为已使用，并返回一个表示该位置地址的 指针（pointer）。这个过程称作 在堆上分配内存（allocating on the heap），有时简称为 “分配”（allocating）。（将数据推入栈中并不被认为是分配）。因为指向放入堆中数据的指针是已知的并且大小是固定的，你可以将该指针存储在栈上，不过当需要实际数据时，必须访问指针。
-
-|规则|说明|参考文档|备注|
-|-|-|-|-|
-|- 已知固定大小的简单值，栈上分配|-|-|- let x = 5; let y = x;|
-|-|-|-|-|
-|-|-|-|-|
-|-|-|-|-|
-|-|-|-|-|
-|-|-|-|-|
+> 先学习: [栈（Stack）与堆（Heap）（The Stack and the Heap）](./000.栈_堆.md)
 
 ---
 
 
 ## 什么是所有权系统
+所有权的主要目的就是管理堆数据 <sup>from [什么是所有权？](https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html)</sup>
+
 跟踪哪部分代码正在使用堆上的哪些数据，最大限度的减少堆上的重复数据的数量，以及清理堆上不再使用的数据确保不会耗尽空间，这些问题正是所有权系统要处理的 [什么是所有权？:栈（Stack）与堆（Heap）](https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html)
 
 
@@ -31,7 +23,7 @@ Rust takes a different path: The memory is automatically returned once the varia
 |-|-|-|
 |- Rust 中的每一个值都有一个 所有者（owner）|-|- 所有者，堆上数据指针?错！所有者 = 资源管理器 + 生命周期控制器|
 |-|-|-|
-|- 值在任一时刻有且只有一个所有者|-|-|
+|- 值在任一时刻有且只有一个所有者|-|-|`
 |-|-|-|
 |- 当所有者离开作用域，这个值将被丢弃|-|-|
 |-|-|-|
