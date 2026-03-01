@@ -67,10 +67,9 @@ Rust takes a different path: The memory is automatically returned once the varia
 
 ```rust
     let mut s = String::from("hello");
-    s = String::from("ahoy"); // 原始的字符串(hello)立刻就离开了作用域
+    s = String::from("ahoy"); // 原始的字符串(hello)立刻就离开了作用域,Rust 会在其上运行 drop 函数同时内存会马上释放
 
     println!("{s}, world!");
-
 
 ```
 
