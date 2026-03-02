@@ -39,9 +39,12 @@
         "--build-dir",
         "build-rust-analyzer"
     ],
+    // rustup component add rust-analyzer --toolchain nightly
+    // rustup override set nightly 只修改当前项目
+    // cargo clean  -> cargo +nightly check
     "rust-analyzer.server.extraEnv": {
-        // "RUSTUP_TOOLCHAIN": "nightly"
-        "RUSTUP_TOOLCHAIN": "stable"
+       "RUSTUP_TOOLCHAIN": "nightly"
+         // "RUSTUP_TOOLCHAIN": "stable"
     },
     "files.associations": {
         "*.fixed": "rust",

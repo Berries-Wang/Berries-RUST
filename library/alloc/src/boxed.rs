@@ -242,6 +242,8 @@ pub struct Box<
 /// the newly allocated memory. This is an intrinsic to avoid unnecessary copies.
 ///
 /// This is the surface syntax for `box <expr>` expressions.
+///
+/// #[rustc_intrinsic]：声明编译器内建函数（Intrinsics） , #[rustc_intrinsic] 告诉编译器：“不要去找这个函数的源代码，它的逻辑已经硬编码在编译器内部了。”
 #[doc(hidden)]
 #[rustc_intrinsic]
 #[unstable(feature = "liballoc_internals", issue = "none")]
