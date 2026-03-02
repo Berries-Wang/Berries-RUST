@@ -224,6 +224,8 @@ pub use thin::ThinBox;
 /// A pointer type that uniquely owns a heap allocation of type `T`.
 ///
 /// See the [module-level documentation](../../std/boxed/index.html) for more.
+/// 
+/// 这是元组结构体(tuple structs),阅读: [https://doc.rust-lang.org/book/ch05-01-defining-structs.html]
 #[lang = "owned_box"]
 #[fundamental]
 #[stable(feature = "rust1", since = "1.0.0")]
@@ -238,10 +240,11 @@ pub struct Box<
     #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global,
 >(Unique<T>, A);
 
-/// Constructs a `Box<T>` by calling the `exchange_malloc` lang item and moving the argument into
-/// the newly allocated memory. This is an intrinsic to avoid unnecessary copies.
+/// Constructs a `Box<T>` by calling the `exchange_malloc` lang item and moving the argument into the newly allocated memory. This is an intrinsic to avoid unnecessary copies.
 ///
-/// This is the surface syntax for `box <expr>` expressions.
+/// 通过调用 exchange_malloc 语言项（lang item）构建一个 Box<T>，并将参数移动到新分配的内存中。这是一个内建函数（intrinsic），旨在避免不必要的拷贝
+/// 
+/// This is the surface syntax for `box <expr>` expressions. (这是 box <expr> 表达式的表层语法)
 #[doc(hidden)]
 #[rustc_intrinsic]
 #[unstable(feature = "liballoc_internals", issue = "none")]
