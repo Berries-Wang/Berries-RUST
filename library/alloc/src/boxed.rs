@@ -242,15 +242,12 @@ pub struct Box<
 
 /// Constructs a `Box<T>` by calling the `exchange_malloc` lang item and moving the argument into the newly allocated memory. This is an intrinsic to avoid unnecessary copies.
 ///
-<<<<<<< HEAD
 /// 通过调用 exchange_malloc 语言项（lang item）构建一个 Box<T>，并将参数移动到新分配的内存中。这是一个内建函数（intrinsic），旨在避免不必要的拷贝
 /// 
 /// This is the surface syntax for `box <expr>` expressions. (这是 box <expr> 表达式的表层语法)
-=======
 /// This is the surface syntax for `box <expr>` expressions.
 ///
 /// #[rustc_intrinsic]：声明编译器内建函数（Intrinsics） , #[rustc_intrinsic] 告诉编译器：“不要去找这个函数的源代码，它的逻辑已经硬编码在编译器内部了。”
->>>>>>> mine/release-1.93.1
 #[doc(hidden)]
 #[rustc_intrinsic]
 #[unstable(feature = "liballoc_internals", issue = "none")]
