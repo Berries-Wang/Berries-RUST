@@ -231,6 +231,8 @@ pub use thin::ThinBox;
 #[doc(search_unbox)]
 // The declaration of the `Box` struct must be kept in sync with the
 // compiler or ICEs will happen.
+// ?Sized： Relaxed Bound（放宽的约束）， 表示: 这个类型可以是有固定大小的，也可以是动态大小的
+// A: Allocator = Global 表示A是一个默认参数（= Global 就是默认泛型参数）,  当Box::new(5)，它使用的是 Global 分配器； 如果你写了： 比如 Box<i32, MyCustomAllocator>，编译器就会使用你提供的分配器
 pub struct Box<
     T: ?Sized,
     #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global,

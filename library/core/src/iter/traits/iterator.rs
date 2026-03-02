@@ -38,6 +38,7 @@ fn _assert_is_dyn_compatible(_: &dyn Iterator<Item = ()>) {}
 #[rustc_diagnostic_item = "Iterator"]
 #[must_use = "iterators are lazy and do nothing unless consumed"]
 pub trait Iterator {
+    // usag（代码编写）:   pub fn build_v2(mut args: impl Iterator<Item = String>) -> Result<Config, &'static str>{...}
     /// The type of the elements being iterated over.
     #[rustc_diagnostic_item = "IteratorItem"]
     #[stable(feature = "rust1", since = "1.0.0")]
