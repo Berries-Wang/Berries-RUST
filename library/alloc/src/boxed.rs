@@ -2196,9 +2196,9 @@ impl<T: ?Sized, A: Allocator> Deref for Box<T, A> {
          * 因为是解引用，所以实例的类型是&T , 即 是个引用(指针)
          *  
          * 如何理解 &**self ?
-         * -> self : 代表调用该方法的结构体实例 , 这里是 &Box<T>
-         * -> *self: 解引用，得到 Box<T>
-         * -> **self: 接引用，得到T
+         * -> self :  代表调用该方法的结构体实例 , 这里是 &Box<T>
+         * -> *self:  解引用，得到 Box<T>
+         * -> **self: 解引用，得到T
          * -> &**self: &表示创建引用,将得到的T重新借用为&T 
          * 
          */
