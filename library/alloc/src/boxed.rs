@@ -2186,6 +2186,7 @@ impl<T: ?Sized, A: Allocator> fmt::Pointer for Box<T, A> {
 
 #[stable(feature = "rust1", since = "1.0.0")]
 impl<T: ?Sized, A: Allocator> Deref for Box<T, A> {
+    /// Target表示关联类型, 当你对这个类型执行“解引用”操作（使用 * 运算符）时，应该得到什么类型
     type Target = T;
 
     fn deref(&self) -> &T {
