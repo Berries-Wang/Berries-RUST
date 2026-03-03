@@ -2186,10 +2186,22 @@ impl<T: ?Sized, A: Allocator> fmt::Pointer for Box<T, A> {
 
 #[stable(feature = "rust1", since = "1.0.0")]
 impl<T: ?Sized, A: Allocator> Deref for Box<T, A> {
-    /// Target表示关联类型, 当你对这个类型执行“解引用”操作（使用 * 运算符）时，应该得到什么类型
+    /// 阅读: [000.RUST-DOCS/017.语法特性/000.关联类型.md]
     type Target = T;
 
     fn deref(&self) -> &T {
+        /*
+         * 阅读:[000.RUST-DOCS/009.智能指针/002.Deref_Trait-将智能指针当做常规引用.md]
+         * 
+         * 因为是解引用，所以实例的类型是&T , 即 是个引用(指针)
+         *  
+         * 如何理解 &**self ?
+         * -> self : 代表调用该方法的结构体实例 , 这里是 &Box<T>
+         * -> *self: 解引用，得到 Box<T>
+         * -> **self: 接引用，得到T
+         * -> &**self: &表示创建引用,将得到的T重新借用为&T 
+         * 
+         */
         &**self
     }
 }
