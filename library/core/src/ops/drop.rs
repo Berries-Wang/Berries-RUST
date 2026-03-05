@@ -1,4 +1,4 @@
-/// Custom code within the destructor.
+/// Custom code within the destructor.(析构函数中的自定义代码)
 ///
 /// When a value is no longer needed, Rust will run a "destructor" on that value.
 /// The most common way that a value is no longer needed is when it goes out of

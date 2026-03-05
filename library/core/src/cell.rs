@@ -1060,10 +1060,10 @@ impl<T> RefCell<T> {
 }
 
 impl<T: ?Sized> RefCell<T> {
-    /// Immutably borrows the wrapped value.
+    /// Immutably borrows the wrapped value.(对包装的值进行不可变借用(引用))
     ///
     /// The borrow lasts until the returned `Ref` exits scope. Multiple
-    /// immutable borrows can be taken out at the same time.
+    /// immutable borrows can be taken out at the same time.(该借用持续到返回的 Ref 离开作用域为止。可以同时进行多个不可变借用。)
     ///
     /// # Panics
     ///
@@ -1158,11 +1158,11 @@ impl<T: ?Sized> RefCell<T> {
         }
     }
 
-    /// Mutably borrows the wrapped value.
+    /// Mutably borrows the wrapped value.(对包装的值进行可变借用(引用))
     ///
     /// The borrow lasts until the returned `RefMut` or all `RefMut`s derived
     /// from it exit scope. The value cannot be borrowed while this borrow is
-    /// active.
+    /// active.(该借用持续到返回的 RefMut 或从其派生的所有 RefMut 离开作用域为止。在此借用活跃期间，无法再借用该值。)
     ///
     /// # Panics
     ///

@@ -1778,7 +1778,7 @@ impl<T: ?Sized, A: Allocator> Rc<T, A> {
         this.inner().weak() - 1
     }
 
-    /// Gets the number of strong (`Rc`) pointers to this allocation.
+    /// Gets the number of strong (`Rc`) pointers to this allocation(获取指向该内存分配的强引用（Rc）计数).
     ///
     /// # Examples
     ///

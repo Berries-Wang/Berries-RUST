@@ -225,7 +225,7 @@ pub use thin::ThinBox;
 ///
 /// See the [module-level documentation](../../std/boxed/index.html) for more.
 /// 
-/// 这是元组结构体(tuple structs),阅读: [https://doc.rust-lang.org/book/ch05-01-defining-structs.html]
+/// 这是元组结构体(tuple structs),阅读: <https://doc.rust-lang.org/book/ch05-01-defining-structs.html>
 #[lang = "owned_box"]
 #[fundamental]
 #[stable(feature = "rust1", since = "1.0.0")]

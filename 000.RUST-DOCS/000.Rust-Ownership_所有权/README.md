@@ -23,7 +23,7 @@ Rust takes a different path: The memory is automatically returned once the varia
 |-|-|-|
 |- Rust 中的每一个值都有一个 所有者（owner）|-|- 所有者，堆上数据指针?错！所有者 = 资源管理器 + 生命周期控制器|
 |-|-|-|
-|- 值在任一时刻有且只有一个所有者|-|-|`
+|- 值在任一时刻有且只有一个所有者|[RefCell<T> 和内部可变性模式](https://kaisery.github.io/trpl-zh-cn/ch15-05-interior-mutability.html): <br/> - 在任意给定时刻，只能拥有一个可变引用或任意数量的不可变引用之一（而不是两者）<br/> - 引用必须始终有效|-|
 |-|-|-|
 |- 当所有者离开作用域，这个值将被丢弃|-|-|
 |-|-|-|
