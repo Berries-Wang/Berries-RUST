@@ -63,6 +63,10 @@
 /// assert_eq!(Point { x: 1, y: 0 } + Point { x: 2, y: 3 },
 ///            Point { x: 3, y: 3 });
 /// ```
+/// 
+/// Rhs = Self : 默认类型参数（default type parameters）
+/// Rhs 是一个泛型类型参数（“right-hand side” 的缩写），它用于定义 add 方法中的 rhs 参数。
+/// 
 #[lang = "add"]
 #[stable(feature = "rust1", since = "1.0.0")]
 #[rustc_const_unstable(feature = "const_ops", issue = "143802")]
