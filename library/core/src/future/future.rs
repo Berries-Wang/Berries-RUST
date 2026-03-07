@@ -35,7 +35,8 @@ use crate::task::{Context, Poll};
     message = "`{Self}` is not a future"
 )]
 pub trait Future {
-    /// The type of value produced on completion.
+    /// The type of value produced on completion（异步任务结束后返回的结果类型）.
+    /// type Output 是Future的关联类型
     #[stable(feature = "futures_api", since = "1.36.0")]
     #[lang = "future_output"]
     type Output;
@@ -108,6 +109,12 @@ pub trait Future {
     /// [`Poll::Ready(val)`]: Poll::Ready
     /// [`Waker`]: crate::task::Waker
     /// [`Waker::wake`]: crate::task::Waker::wake
+    /// 
+    /// 有类型注解的self: 
+    ///    - 告诉 Rust 在调用该方法时 self 必须具备的类型
+    ///    - 不能是任意类型。这限制了实现了该方法的类型，是一个该类型的引用或者智能指针，或者一个封装了该类型引用的 Pin
+    /// 
+    /// Pin 参考:[000.RUST-DOCS/020.future_trait-async和await/005.Pin-UnPin.md]
     #[lang = "poll"]
     #[stable(feature = "futures_api", since = "1.36.0")]
     fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output>;

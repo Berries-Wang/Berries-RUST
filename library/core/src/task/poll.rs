@@ -12,7 +12,8 @@ use crate::ops::{self, ControlFlow};
 #[lang = "Poll"]
 #[stable(feature = "futures_api", since = "1.36.0")]
 pub enum Poll<T> {
-    /// Represents that a value is immediately ready.
+    /// Represents that a value is immediately ready.（表示一个值已立即可用）
+    /// Ready 变体表明 future 已经完成了其工作并且 T 的值是可用的
     #[lang = "Ready"]
     #[stable(feature = "futures_api", since = "1.36.0")]
     Ready(#[stable(feature = "futures_api", since = "1.36.0")] T),
@@ -20,8 +21,9 @@ pub enum Poll<T> {
     /// Represents that a value is not ready yet.
     ///
     /// When a function returns `Pending`, the function *must* also
-    /// ensure that the current task is scheduled to be awoken when
-    /// progress can be made.
+    /// ensure that the current task is scheduled(!,谁安排? Rust 运行时!) to be awoken when
+    /// progress can be made. (当一个函数返回 Pending 时，它必须确保当前任务已被安排好在能够取得进展时被唤醒)
+    /// Pending 变体表明 future 仍然还有工作要进行，所有调用者稍后需要再次检查
     #[lang = "Pending"]
     #[stable(feature = "futures_api", since = "1.36.0")]
     Pending,
