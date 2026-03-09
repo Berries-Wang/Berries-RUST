@@ -91,6 +91,10 @@ fn index() {
 ```rust
 
   # 这里有两个 TokenStream 类型的参数；第一个用于属性内容本身，也就是 GET, "/" 部分。第二个是属性所标记的项：在本例中，是 fn index() {} 和剩下的函数体。
+
+  # toion 是运行时库，没有这个实现，所以这里的代码只是一个示例，无法编译
+  # axum 是一个 web 应用程序框架，没有这个实现，所以这里的代码只是一个示例，无法编译
+  
   #[proc_macro_attribute]
   pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {
         // --snip--
