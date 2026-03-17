@@ -121,6 +121,12 @@ pub fn sql(input: TokenStream) -> TokenStream {
 
 ```
 
+---
+
+## 参考资料
+- [Rust 宏小册.epub](../999.BOOKS/Rust%20宏小册.epub)
+- [https://github.com/zjp-CN/tlborm](https://github.com/zjp-CN/tlborm)
+- [https://zjp-cn.github.io/tlborm/decl-macros/macros-methodical.html](https://zjp-cn.github.io/tlborm/decl-macros/macros-methodical.html)
 
 
 
