@@ -1,0 +1,11 @@
+[package]
+name = "hello_macro_derive"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+syn = "2.0"
+quote = "1.0"
+
+[lib]
+proc-macro = true # 声明 hello_macro_derive crate 为过程宏 (proc-macro) crate
