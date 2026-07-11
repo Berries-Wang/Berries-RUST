@@ -3,6 +3,7 @@
     "browser-ui-test": "^0.23.3",
     "es-check": "^9.4.4",
     "eslint": "^8.57.1",
+    "playwright": "^1.61.1",
     "typescript": "^5.8.3"
   }
 }
