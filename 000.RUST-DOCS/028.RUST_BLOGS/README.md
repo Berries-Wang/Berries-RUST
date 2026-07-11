@@ -2,15 +2,12 @@
 
 
 ## 参考资料
-+ https://mp.weixin.qq.com/s/1PHIRcpfXUPcRwApDjoVfQ — Rust 1.97 让链接器输出不再沉默：构建透明度的一次默认变更
-+ https://mp.weixin.qq.com/s/QB6wKqXi5N7zOiJAJHZdpA — Rust 1.97.0 实战指南：新特性深度解析与最佳实践
 + https://mp.weixin.qq.com/s/SgdVqi0sl7g5ziamBazJOA — Rust 1.97 修复了 pin!() 的一个隐蔽未定义行为：Deref 强制转换如何绕过 Pin 的保证
 + https://mp.weixin.qq.com/s/esaBYMVx-bVCHBbDysJX8w — Rust 性能调优实战：hotpath-rs 从埋点到 CI 防劣化完全指南
 + https://mp.weixin.qq.com/s/J2CPrHAtpgCDXjsZlm37Dg — Polonius 正在走近稳定：Rust 借用检查器的下一站
 + https://mp.weixin.qq.com/s/-4DoLQSrBYO9Cc_8-3yCPA — Rust `use` 关键字深度剖析：构建清晰模块路径的艺术与最佳实践
 + https://mp.weixin.qq.com/s/3AKY-YXURgzAmDoT41Tu_A — Rust #[path] 属性深度解析：打破模块约定的利与弊，及最佳实践决策框架
 + https://mp.weixin.qq.com/s/QzMfvBxFy1YQJZK4h80m6A — #[diagnostic::on_unknown] 进入模块：Rust 自定义错误消息的精细化控制
-+ https://mp.weixin.qq.com/s/_psY5J8sgZ_hfFAzz51dng — 当 cfg!() 遇上宏变量：Rust 宏编程的关键改进
 + https://mp.weixin.qq.com/s/nSlc7BBPkfsBbSC1W_Jkzg — Rust 的 Range 类型终于可以 Copy 了：core::range 模块的价值
 + https://mp.weixin.qq.com/s/O4JtEtyOA1R7iChbINAMbw — 从 matches!() 到 assert_matches!()：Rust 断言机制的一次补齐
 + https://mp.weixin.qq.com/s/RgYqbZD2piGlcqKKAtjpAA — Rust 网络编程：从 TCP 到 QUIC
@@ -122,4 +119,3 @@
 + https://mp.weixin.qq.com/s/W7Mt4YjKOVi__tZ7R0RrIw — Rust 的 newtype 模式终于要成为一等公民了
 + https://mp.weixin.qq.com/s/-LWYPUX9UOdRWP3oU5rd3A — 一行 &amp; 和 clone()，决定你是不是真的懂 Rust
 + https://mp.weixin.qq.com/s/HQ69vTB10YDEHZgETD7vrQ — Rust 日志系统极限优化：双轮转引擎 + 零阻塞清理的生产级实战
-+ https://mp.weixin.qq.com/s/jBI-CfRZQnmJgv7ddjSPCw — Rust 1.97：安全检查推进到编译之后
